@@ -143,7 +143,8 @@ class MSM170B extends MSOHook{
                     districtCode.trim().substring(2) == "TA" ||
                     districtCode.trim().substring(2) == "MK" ||
                     districtCode.trim().substring(2) == "MT" ? districtCode.trim().substring(2) :
-                    districtCode.trim() == "SGRK" ? "GR" : "PLNUPJB"
+                    districtCode.trim() == "SGRK" ? "GR" : 
+					districtCode.trim() == "SPTN" ? "PT" :"PLNUPJB"
         }
 
         Constraint constDistrict = MSF170Key.dstrctCode.equalTo(districtCode)
