@@ -142,7 +142,8 @@ class MSM170C extends MSOHook{
                     districtCode.trim().substring(2) == "TA" ||
                     districtCode.trim().substring(2) == "MK" ||
                     districtCode.trim().substring(2) == "MT" ? districtCode.trim().substring(2) :
-                    districtCode.trim() == "SGRK" ? "GR" : "PLNUPJB"
+                    districtCode.trim() == "SGRK" ? "GR" : 
+					districtCode.trim() == "SPTN" ? "PT" :"PLNUPJB"
         }
 
         String xmlMessage = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
